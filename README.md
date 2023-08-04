@@ -1,2 +1,39 @@
-# rss_kindle
-Simple RSS Reader for the Kindle Web Browser
+## RSS Reader for Kindle
+
+A simple and lightweight RSS reader designed for optimal performance on Kindle devices. Hosted and developed using Flask, this web-based application offers both unified and grouped views of RSS feeds.
+
+### Features:
+- **Unified Feed View**: Displays all RSS entries from various feeds sorted by date.
+- **Grouped Feed View**: Categorizes entries based on their respective RSS sources.
+- **Easy Feed Management**: Add or remove RSS feeds seamlessly.
+- **Optimized for Kindle**: Designed with Kindle's unique display and performance characteristics in mind.
+- **Persistent Storage**: Uses a SQLite database to save and manage the RSS feed URLs.
+
+### Installation:
+
+1. Clone the repository:
+   ```
+   git clone [Your GitHub Repository URL]
+   ```
+2. Navigate to the project directory:
+   ```
+   cd [Your Repository Name]
+   ```
+3. Install the required packages:
+   ```
+   pip3 install -r requirements.txt
+   ```
+4. Run the application:
+   ```
+   python3 app.py
+   ```
+
+### Usage:
+
+- **Add Feed**: Enter the RSS feed URL and click the "Add Feed" button.
+- **View Entries**: Choose between "Unified Feed" and "Grouped Feeds" from the navigation bar.
+- **Remove Feed**: In the "Grouped Feeds" view, click the "Remove" button next to the feed name.
+
+### Contributing:
+
+Feel free to fork the repository and submit pull requests. All contributions are welcome!

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Reader</title>
+    <!-- Adding the Comic Mono font stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css">
+    <style>
+        body {
+            font-family: 'Comic Mono', Arial, sans-serif;
+            /* Use Comic Mono if available, fallback to Arial */
+            font-size: 24px;
+            margin: 20px 15px;
+            /* 15px margin on the sides for a little spacing */
+            width: calc(100% - 30px);
+            /* Minus margins */
+            box-sizing: border-box;
+            /* This ensures padding and borders don't add extra width */
+        }
+
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        button {
+            font-family: 'Comic Mono', monospace;
+            /* Apply Comic Mono font to inputs and buttons */
+            padding: 10px;
+            font-size: 24px;
+            width: 70%;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+        }
+
+        .navbar a,
+        .navbar button {
+            font-size: 48px;
+            /* Double the base font size */
+        }
+
+        .feed-section {
+            border: 1px solid #000;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+
+
+        * {
+            max-width: 100% !important;
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            body,
+            p,
+            a,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: 24px !important;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/unified">📜 Unified Feed</a>
+        <a href="/grouped">📂 Grouped Feeds</a>
+        <!-- Add Feed button and input field -->
+        <form action="/add_feed" method="post" style="display: inline;">
+            <input type="text" id="rssURL" name="rssURL" placeholder="Enter RSS/Atom URL" required
+                style="padding: 5px; font-size: 16px;">
+            <button type="submit">➕ Add Feed</button>
+        </form>
+    </div>
+
+    <!-- Content will be injected here from child templates -->
+    {% block content %}{% endblock %}
+</body>
+
+</html>

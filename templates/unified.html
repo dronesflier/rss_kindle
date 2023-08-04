@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="feedList">
+    {% for entry in entries %}
+        <div>
+            <h2><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h2>
+            <div class="expandable-content" onclick="toggleContent(this)">
+                {% if entry.get('description') %}
+                    {{ entry.description.replace('<!-- SC_OFF -->', '').replace('<!-- SC_ON -->', '')|safe }}
+                {% elif entry.get('summary') %}
+                    {{ entry.summary.replace('<!-- SC_OFF -->', '').replace('<!-- SC_ON -->', '')|safe }}
+                {% elif entry.get('content') %}
+                    {{ entry.content[0].value.replace('<!-- SC_OFF -->', '').replace('<!-- SC_ON -->', '')|safe }}
+                {% endif %}
+            </div>
+            <small>Published on: {{ entry.published }}</small>
+        </div>
+    {% endfor %}
+</div>
+<script>
+    function toggleContent(element) {
+        if (element.style.maxHeight) {
+            element.style.maxHeight = null;
+        } else {
+            element.style.maxHeight = element.scrollHeight + "px";
+        }
+    }
+</script>
+<style>
+    .expandable-content {
+        max-height: 100px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: max-height 0.3s ease;
+    }
+</style>
+{% endblock %}

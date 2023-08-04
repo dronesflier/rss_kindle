@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="feedList">
+    {% for feed_url, entries in feed_data.items() %}
+    <div class="feed-section">
+        <!-- Feed Toggle Button -->
+        <button class="feed-toggle" onclick="toggleFeed(this)">
+            {{ feed_url }}
+        </button>
+        
+        
+
+        <!-- Remove Button -->
+        <a href="{{ url_for('remove_feed', feed_url=feed_url) }}">Remove</a>
+
+
+
+        <!-- Feed Entries (initially hidden) -->
+        <div class="feed-entries" style="display:none;">
+            {% for entry in entries %}
+            <div>
+                <h3><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h3>
+                {% if entry.content %}
+                <p>{{ entry.content[0].value|safe }}</p>
+                {% else %}
+                <p>{{ entry.summary|safe }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+<script>
+function toggleFeed(buttonElement) {
+    // Find the sibling element with the class 'feed-entries'
+    const feedEntries = buttonElement.nextElementSibling.nextElementSibling;
+
+    // Toggle its display style
+    if (feedEntries.style.display === 'none') {
+        feedEntries.style.display = 'block';
+    } else {
+        feedEntries.style.display = 'none';
+    }
+}
+
+</script>
+{% endblock %}

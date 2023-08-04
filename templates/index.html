@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Reader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 18px;
+            width: 70%;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        #feedList>div {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>RSS Reader</h1>
+
+    <form action="/add_feed" method="post">
+        <label for="rssURL">RSS Feed URL:</label>
+        <input type="text" id="rssURL" name="rssURL" required>
+        <button type="submit">Add Feed</button>
+    </form>
+
+    <div id="feedList">
+        {% for entry in entries %}
+            <div>
+                <h2><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h2>
+                <p>{{ entry.description }}</p>
+                <small>Published on: {{ entry.published }}</small>
+            </div>
+        {% endfor %}
+    </div>
+    
+
+</body>
+
+</html>
