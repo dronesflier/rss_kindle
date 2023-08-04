@@ -27,6 +27,8 @@ A simple and lightweight RSS reader designed for optimal "performance" on Kindle
    ```
    python3 app.py
    ```
+Visit ```0.0.0.0:5000``` in a browser (preferably, y'know, on the kindle)
+
 
 ### Usage:
 
