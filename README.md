@@ -13,11 +13,11 @@ A simple and lightweight RSS reader designed for optimal performance on Kindle d
 
 1. Clone the repository:
    ```
-   git clone [Your GitHub Repository URL]
+   git clone https://github.com/dronesflier/rss_kindle
    ```
 2. Navigate to the project directory:
    ```
-   cd [Your Repository Name]
+   cd rss_kindle
    ```
 3. Install the required packages:
    ```
