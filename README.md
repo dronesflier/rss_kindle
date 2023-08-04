@@ -1,6 +1,6 @@
 ## RSS Reader for Kindle
 
-A simple and lightweight RSS reader designed for optimal performance on Kindle devices. Hosted and developed using Flask, this web-based application offers both unified and grouped views of RSS feeds.
+A simple and lightweight RSS reader designed for optimal "performance" on Kindle devices. Hosted and developed using Flask, this web-based application offers both unified and grouped views of RSS feeds.
 
 ### Features:
 - **Unified Feed View**: Displays all RSS entries from various feeds sorted by date.
@@ -33,6 +33,9 @@ A simple and lightweight RSS reader designed for optimal performance on Kindle d
 - **Add Feed**: Enter the RSS feed URL and click the "Add Feed" button.
 - **View Entries**: Choose between "Unified Feed" and "Grouped Feeds" from the navigation bar.
 - **Remove Feed**: In the "Grouped Feeds" view, click the "Remove" button next to the feed name.
+
+### Bugs:
+- ***Incorrect size**: I tested this application on a kindle PaperWhite 7th Gen, and the web browser is a bit buggy; you need to sometimes when loading the page zoom in once by pinching and then out again to get the proper zoom
 
 ### Contributing:
 
