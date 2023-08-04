@@ -35,7 +35,7 @@ A simple and lightweight RSS reader designed for optimal "performance" on Kindle
 - **Remove Feed**: In the "Grouped Feeds" view, click the "Remove" button next to the feed name.
 
 ### Bugs:
-- ***Incorrect size**: I tested this application on a kindle PaperWhite 7th Gen, and the web browser is a bit buggy; you need to sometimes when loading the page zoom in once by pinching and then out again to get the proper zoom
+- **Incorrect size**: I tested this application on a kindle PaperWhite 7th Gen, and the web browser is a bit buggy; you need to sometimes when loading the page zoom in once by pinching and then out again to get the proper zoom
 
 ### Contributing:
 
