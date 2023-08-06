@@ -1,6 +1,6 @@
 ## RSS Reader for Kindle
 
-A simple and lightweight RSS reader designed for optimal "performance" on Kindle devices. Hosted and developed using Flask, this web-based application offers both unified and grouped views of RSS feeds.
+A simple and lightweight RSS/Atom reader designed for optimal "performance" on Kindle devices. Hosted and developed using Flask, this web-based application offers both unified and grouped views of RSS feeds.
 
 ### Features:
 - **Unified Feed View**: Displays all RSS entries from various feeds sorted by date.
